@@ -1,0 +1,10 @@
+#
+# This config uses rewrite module to feed http requests to proxy.php script.
+# In this example, all requests made within path /api is considered an AJAX request that needs to be proxied.
+#
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php
