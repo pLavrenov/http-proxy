@@ -99,7 +99,7 @@ class Proxy {
         http_response_code($response_http_code);
 
         // Send the response output
-        return $response_error ? $response_error : $response_body;
+        return $response_error ? $response_error : str_replace(TARGET_HOST, REPLACE_HOST, $response_body);
     }
 
 }
