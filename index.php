@@ -2,6 +2,10 @@
 require_once './config.php';
 require_once './libs/http_build_url.php';
 
+
+$error_level = error_reporting();
+error_reporting($error_level & ~E_WARNING);
+
 class Proxy {
 
     private $session, $response;
